@@ -2,6 +2,17 @@ function calculateWords(chapterOfABook) {
   const wordCount = {};
 
   // Write your code in here
+  //1. string=> array can be done by  string.split(" ") returning new array of substrings
+  //2 loop through new array of substrings using .forEach or 
+  //
+  let strArrayOfABook = chapterOfABook.split(" ").forEach((word) => {
+       if(!wordCount[word]){
+         wordCount[word] = 1   //assigning to value 1
+       }else {
+        wordCount[word] +=1;  //grabs previous value +1
+       }
+  });
+  
 
   return wordCount;
 }
